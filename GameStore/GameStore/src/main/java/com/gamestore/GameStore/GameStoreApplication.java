@@ -1,12 +1,12 @@
-package com.drugstore.Drugstore;
+package com.gamestore.GameStore;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DrugstoreApplication {
+public class GameStoreApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DrugstoreApplication.class, args);
+		SpringApplication.run(GameStoreApplication.class, args);
 	}
 }

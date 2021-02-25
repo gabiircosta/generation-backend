@@ -11,36 +11,47 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Entity
 @Table (name = "tb_product")
+@NoArgsConstructor
 public class Product {
 	
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	@Column (name = "ID")
+	@Getter
 	private long id;
 	
 	@Column (name = "ICD", nullable = false)
 	@Size (min = 1, max = 255)
+	@Getter @Setter
 	private String ICD;
 	
 	@Column (name = "Name", nullable = false)
 	@Size (min = 1, max = 255)
+	@Getter @Setter
 	private String name;
 	
 	@Column (name = "Disease", nullable = false)
 	@Size (min = 1, max = 255)
+	@Getter @Setter
 	private String typeDisease;
 	
 	@Column (name = "Description", nullable = false)
 	@Size (min = 1, max = 255)
+	@Getter @Setter
 	private String description;
 		
 	@ManyToOne
 	@JsonIgnoreProperties("product")
+	@Getter @Setter
 	private Category category;
 
-	public long getId() {
+	/*public long getId() {
 		return id;
 	}
 	public Category getCategory() {
@@ -76,6 +87,6 @@ public class Product {
 	}
 	public void setDescription(String description) {
 		this.description = description;
-	}
+	}*/
 	
 }

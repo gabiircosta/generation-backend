@@ -14,30 +14,30 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-//import lombok.Getter;
-//import lombok.NoArgsConstructor;
-//import lombok.Setter;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table (name = "tb_category")
-//@NoArgsConstructor
+@NoArgsConstructor
 public class Category {
 
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	@Column (name = "ID")
-	//@Getter
+	@Getter
 	private long id;
 	
 	@Column (name = "Sections", nullable = false)
 	@Size (min = 1, max = 255)
-	//@Getter @Setter
+	@Getter @Setter
 	private String sections;
 	//Medicamentos, Estética, Higiene Pessoal, Mamãe & Bebê
 	
 	@Column (name = "Description", nullable = false)
 	@Size (min = 1, max = 255)
-	//@Getter @Setter
+	@Getter @Setter
 	private String description;
 	//breve descrição da categoria
 
@@ -45,7 +45,7 @@ public class Category {
 	@JsonIgnoreProperties("category")
 		private List<Product> product;
 	
-	public long getId() {
+	/*public long getId() {
 		return id;
 	}
 
@@ -75,7 +75,7 @@ public class Category {
 
 	public void setProduct(List<Product> product) {
 		this.product = product;
-	}
+	}*/
 
 		
 }
