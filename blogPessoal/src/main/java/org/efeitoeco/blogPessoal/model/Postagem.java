@@ -12,10 +12,8 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import org.springframework.lang.NonNull;
-
 @Entity
-@Table(name = "Postagem")
+@Table(name = "Postagens")
 public class Postagem {
 	
 	@Id
@@ -38,11 +36,11 @@ public class Postagem {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getTítulo() {
+	public String getTitulo() {
 		return titulo;
 	}
-	public void setTítulo(String título) {
-		this.titulo = título;
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
 	}
 	public String getTexto() {
 		return texto;
