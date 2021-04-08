@@ -23,15 +23,15 @@ public class User {
 	private Long id;
 	
 	@NotNull
-	@Size (min = 2, max = 100)
+	@Size(min = 2, max = 100)
 	private String name;
 	
 	@NotNull
-	@Size (min = 2, max = 100)
+	@Size(min = 2, max = 100)
 	private String user;
 	
 	@NotNull
-	@Size (min = 2)
+	@Size(min = 2)
 	private String password;
 	
 	private String photo;

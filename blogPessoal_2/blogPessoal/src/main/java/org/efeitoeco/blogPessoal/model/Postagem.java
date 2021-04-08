@@ -23,15 +23,15 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Postagem {
 	
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	@NotNull
-	@Size (min = 5, max = 100)
+	@Size(min = 5, max = 100)
 	private String titulo;
 	
 	@NotNull
-	@Size (min = 10, max = 500)	
+	@Size(min = 10, max = 500)	
 	private String texto;
 	
 	@Temporal(TemporalType.TIMESTAMP)
@@ -42,7 +42,7 @@ public class Postagem {
 	private User user;
 	
 	@ManyToOne
-	@JsonIgnoreProperties ("postagem")
+	@JsonIgnoreProperties("postagem")
 	private Tema tema;
 	
 	public Long getId() {
@@ -68,6 +68,18 @@ public class Postagem {
 	}
 	public void setData(Date data) {
 		this.data = data;
+	}
+	public User getUser() {
+		return user;
+	}
+	public void setUser(User user) {
+		this.user = user;
+	}
+	public Tema getTema() {
+		return tema;
+	}
+	public void setTema(Tema tema) {
+		this.tema = tema;
 	}
 	
 	
