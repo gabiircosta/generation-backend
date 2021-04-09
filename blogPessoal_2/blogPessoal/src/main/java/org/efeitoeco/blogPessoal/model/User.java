@@ -42,6 +42,7 @@ public class User {
 	@JsonIgnoreProperties("user")
 	private List<Postagem> postagem;
 
+	
 	public Long getId() {
 		return id;
 	}
@@ -88,6 +89,14 @@ public class User {
 
 	public void setType(String type) {
 		this.type = type;
+	}
+	
+	public List<Postagem> getPostagem() {
+		return postagem;
+	}
+
+	public void setPostagem(List<Postagem> postagem) {
+		this.postagem = postagem;
 	}
 
 }
